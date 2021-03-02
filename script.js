@@ -59,6 +59,7 @@ for (var i=0; i<firstQuestion.options.length; i++){
 function correctAnswer(){
     if (this.value !==questions[currentQuestion].correctAnswer){
         timerCount-=20;
+        
         timerElement.textContent="Time left:" + timerCount;
     }
     currentQuestion++
@@ -80,14 +81,13 @@ function startTimer() {
     timer = setInterval(function() {
       timerCount--;
       timerElement.textContent = timerCount;
-      if (timerCount >= 0) {
-        // Tests if win condition is met
-        
+      if (timerCount >= 0) {        
       }
       // Tests if time has run out
       if (timerCount === 0) {
         // Clears interval
         clearInterval(timer);
+        
       }
     }, 1000);
   }
