@@ -67,6 +67,8 @@ function correctAnswer(){
         
         //call end of quiz function
 console.log ("end of quiz!")
+
+
     }
     else {
         newQuestions()
@@ -87,6 +89,7 @@ function startTimer() {
       if (timerCount === 0) {
         // Clears interval
         clearInterval(timer);
+        endOfquiz();
         
       }
     }, 1000);
@@ -95,6 +98,8 @@ function startTimer() {
       endOfquiz();
     
   }
-//   Event listener to save the information into the local storage
-var allScores=document.querySelector("#allScores");
+//end of quiz
+function endOfquiz(){
+    clearInterval(timer);
+}
 

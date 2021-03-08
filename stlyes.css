@@ -41,9 +41,9 @@ p{
 .hide{
     display: none;
 }
-#options{
-    display: inline-block;
-    justify-content:space-between;
-    
-    
+.options{
+    display:flex;
+    justify-content: space-evenly;
+    align-items:center;
+
 }
